@@ -81,8 +81,8 @@ p{
 
 /* Profile Image */
 .profile-img{
-    width: 280px;px;
-    height: 280px;px;
+    width: 240px;px;
+    height: 240px;px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #00f5ff;
