@@ -138,23 +138,152 @@ p{
 /* Projects */
 .project-container{
     display:flex;
-    flex-wrap:wrap;
-    gap:20px;
+    gap:30px;
     justify-content:center;
+    flex-wrap:wrap;
+    margin-top:50px;
 }
 
-.project{
-    width:450px;
-    background:rgba(255,255,255,0.1);
+.project-card{
+    position:relative;
+    width:320px;
+    height:220px;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.1);
+}
+
+/* Glass Sliding Panel */
+.project-info{
+    position:absolute;
+    bottom:-100%;
+    left:0;
+    width:100%;
+    height:70%;
+    backdrop-filter:blur(8px);
+    background:rgba(0,0,0,0.6);
+    color:white;
     padding:20px;
-    border-radius:15px;
+    text-align:center;
+    transition:0.6s ease;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    opacity:0;
+}
+
+.project-card:hover .project-info{
+    bottom:0;
+    opacity:1;
+}
+
+.project-info h3{
+    margin-bottom:10px;
+    color:#00f5ff;
+}
+
+.project-info p{
+    font-size:14px;
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+/* Buttons */
+.project-buttons a{
+    text-decoration:none;
+    color:white;
+    background:#00f5ff;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-size:13px;
     transition:0.3s;
 }
 
-.project:hover{
-    transform:translateY(-10px);
-    background:rgba(255,255,255,0.2);
+.project-buttons a:hover{
+    background:white;
+    color:black;
 }
+
+
+#certifications{
+    margin-top:80px;
+    text-align:center;
+}
+
+.certificate-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.certificate-card{
+    width:320px;
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+    transition:0.4s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+}
+
+.certificate-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.certificate-card:hover img{
+    transform:scale(1.05);
+}
+
+.certificate-info{
+    padding:20px;
+}
+
+.certificate-info h3{
+    margin-bottom:10px;
+    color:#00f5ff;
+}
+
+.certificate-info p{
+    font-size:14px;
+    color:#ccc;
+    margin-bottom:15px;
+}
+
+.certificate-info a{
+    text-decoration:none;
+    background:#00f5ff;
+    color:black;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.certificate-info a:hover{
+    background:white;
+}
+
 
 /* Contact */
 form{
